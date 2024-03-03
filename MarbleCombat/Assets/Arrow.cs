@@ -25,8 +25,6 @@ public class Arrow : MonoBehaviour
 			//impact
 			RaycastHit2D Hit = Physics2D.Raycast(transform.position, transform.up,2,filter.layerMask);
 			//Debug.DrawRay(transform.position, transform.up * 2);
-			Debug.DrawLine(transform.position, Hit.point);
-			Debug.Log(Hit.point);
 			if (Hit.collider != null) {
 				Debug.Log("Collider");
 				MarblePawn otherMB = Hit.collider.gameObject.GetComponentInChildren<MarblePawn>();

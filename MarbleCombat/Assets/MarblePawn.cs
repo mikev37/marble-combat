@@ -19,6 +19,8 @@ public class MarblePawn : MonoBehaviour
 		
 		GetComponentInChildren<Rigidbody2D>().mass = MASS;   
     }
+	float update;
+	protected Transform closestEnemy;
     // Update is called once per frame
     void Update()
     {
@@ -26,14 +28,10 @@ public class MarblePawn : MonoBehaviour
 			STUN -= Time.deltaTime;
 			Stun();
 		} else {
-			enemies.RemoveAll(s => s == null);
-			allies.RemoveAll(s => s == null);
-			Transform closestEnemy = null;
-			foreach(MarblePawn mb in enemies) {
-				if(!closestEnemy || Vector2.Distance(closestEnemy.position,transform.position) > Vector2.Distance(mb.transform.position, transform.position)) {
-					closestEnemy = mb.transform;
-				}
-			}
+			if (update <= 0) {
+				findClosestEnemy();
+				update = Random.value + .2f;
+			} else update -= Time.deltaTime;
 			if(closestEnemy && Vector2.Distance(closestEnemy.position,transform.position) < ATTACK_DISTANCE) {
 				Charge(closestEnemy);
 			} else {
@@ -41,6 +39,16 @@ public class MarblePawn : MonoBehaviour
 			}
 		}
     }
+
+	protected virtual void findClosestEnemy() {
+		enemies.RemoveAll(s => s == null);
+		closestEnemy = null;
+		foreach (MarblePawn mb in enemies) {
+			if (!closestEnemy || Vector2.Distance(closestEnemy.position, transform.position) > Vector2.Distance(mb.transform.position, transform.position)) {
+				closestEnemy = mb.transform;
+			}
+		}
+	}
 
 	void Die() {
 		GameObject.Destroy(gameObject);
@@ -70,31 +78,39 @@ public class MarblePawn : MonoBehaviour
 	}
 
 	public Vector2 turnRotation, moveDirection;
-
+	Vector2 targetDelta;
+	Vector2 averageAlignment;
 	void Normal() {
 		eyes.sprite = normal;
 		
 		Vector2 averagePosition = transform.position;
-		Vector2 averageAlignment = transform.up * -1;
+		
+		
 		Transform closestAlly = null;
-		foreach (MarblePawn mb in allies) {
-			averageAlignment += (Vector2)mb.transform.up * -1;
-			averagePosition += (Vector2)mb.transform.position;
+		if (update <= 0) {
+			averageAlignment = transform.up * -1;
+			allies.RemoveAll(s => s == null);
+			foreach (MarblePawn mb in allies) {
+				averageAlignment += (Vector2)mb.transform.up * -1;
+				averagePosition += (Vector2)mb.transform.position;
 
-			if (!closestAlly || Vector2.Distance(closestAlly.position, transform.position) > Vector2.Distance(mb.transform.position, transform.position)) {
-				closestAlly = mb.transform;
+				if (!closestAlly || Vector2.Distance(closestAlly.position, transform.position) > Vector2.Distance(mb.transform.position, transform.position)) {
+					closestAlly = mb.transform;
+				}
 			}
-		}
-		averagePosition /= allies.Count+1;
-		//Cohesion
-		Vector2 targetDelta = averagePosition - (Vector2)transform.position;
-		//Separation
-		if (closestAlly && Vector2.Distance(closestAlly.position, transform.position) < SEPARATE_DISTANCE) {
-			targetDelta = targetDelta.normalized + (Vector2)(transform.position - closestAlly.position).normalized;
-		}
+			averagePosition /= allies.Count + 1;
+			//Cohesion
+			targetDelta = averagePosition - (Vector2)transform.position;
+			//Separation
+			if (closestAlly && Vector2.Distance(closestAlly.position, transform.position) < SEPARATE_DISTANCE) {
+				targetDelta = targetDelta.normalized + (Vector2)(transform.position - closestAlly.position).normalized;
+			}
+			update = Random.value + .2f;
+			//Forward Direction
+			targetDelta = targetDelta.normalized + (Vector2)(-3f * transform.up);
+		} else update -= Time.deltaTime;
 
-		//Forward Direction
-		targetDelta = targetDelta.normalized + (Vector2)(-3f * transform.up);
+		
 
 		if (moveDirection == null || moveDirection.magnitude == 0) { moveDirection = targetDelta.normalized; }
 

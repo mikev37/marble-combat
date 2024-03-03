@@ -7,6 +7,9 @@ public class CameraDrag : MonoBehaviour
 	private Vector3 Diference;
 	private bool Drag = false;
 	void Start() {
+		QualitySettings.vSyncCount = 1;
+
+		Application.targetFrameRate = 60;
 		ResetCamera = Camera.main.transform.position;
 	}
 	void LateUpdate() {
