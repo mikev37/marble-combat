@@ -12,3 +12,5 @@ MarbleCombat/.vsconfig
 MarbleCombat/Assembly-CSharp.csproj
 
 MarbleCombat/Library/
+
+MarbleCombat/Temp/

@@ -92,10 +92,12 @@ public class MarblePawn : MonoBehaviour
 			allies.RemoveAll(s => s == null);
 			foreach (MarblePawn mb in allies) {
 				averageAlignment += (Vector2)mb.transform.up * -1;
-				averagePosition += (Vector2)mb.transform.position;
+				if (Vector2.Distance(mb.transform.position, transform.position) < 2) {
+					averagePosition += (Vector2)mb.transform.position;
 
-				if (!closestAlly || Vector2.Distance(closestAlly.position, transform.position) > Vector2.Distance(mb.transform.position, transform.position)) {
-					closestAlly = mb.transform;
+					if (!closestAlly || Vector2.Distance(closestAlly.position, transform.position) > Vector2.Distance(mb.transform.position, transform.position)) {
+						closestAlly = mb.transform;
+					}
 				}
 			}
 			averagePosition /= allies.Count + 1;
