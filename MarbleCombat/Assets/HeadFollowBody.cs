@@ -17,7 +17,7 @@ public class HeadFollowBody : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Quaternion rotation = Quaternion.identity;
+		Quaternion rotation = transform.rotation;
 		if (rotate)
 			rotation = body.rotation;
 		gameObject.transform.SetPositionAndRotation(body.position + (Vector3)diff, rotation);

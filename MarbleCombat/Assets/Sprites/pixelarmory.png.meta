@@ -261,7 +261,7 @@ TextureImporter:
       213: 21300170
     second: pixelarmory_85
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -278,10 +278,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -290,9 +292,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -320,6 +322,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -331,6 +335,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -343,6 +348,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
@@ -2164,9 +2196,95 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      pixelarmory_0: 21300000
+      pixelarmory_1: 21300002
+      pixelarmory_10: 21300020
+      pixelarmory_11: 21300022
+      pixelarmory_12: 21300024
+      pixelarmory_13: 21300026
+      pixelarmory_14: 21300028
+      pixelarmory_15: 21300030
+      pixelarmory_16: 21300032
+      pixelarmory_17: 21300034
+      pixelarmory_18: 21300036
+      pixelarmory_19: 21300038
+      pixelarmory_2: 21300004
+      pixelarmory_20: 21300040
+      pixelarmory_21: 21300042
+      pixelarmory_22: 21300044
+      pixelarmory_23: 21300046
+      pixelarmory_24: 21300048
+      pixelarmory_25: 21300050
+      pixelarmory_26: 21300052
+      pixelarmory_27: 21300054
+      pixelarmory_28: 21300056
+      pixelarmory_29: 21300058
+      pixelarmory_3: 21300006
+      pixelarmory_30: 21300060
+      pixelarmory_31: 21300062
+      pixelarmory_32: 21300064
+      pixelarmory_33: 21300066
+      pixelarmory_34: 21300068
+      pixelarmory_35: 21300070
+      pixelarmory_36: 21300072
+      pixelarmory_37: 21300074
+      pixelarmory_38: 21300076
+      pixelarmory_39: 21300078
+      pixelarmory_4: 21300008
+      pixelarmory_40: 21300080
+      pixelarmory_41: 21300082
+      pixelarmory_42: 21300084
+      pixelarmory_43: 21300086
+      pixelarmory_44: 21300088
+      pixelarmory_45: 21300090
+      pixelarmory_46: 21300092
+      pixelarmory_47: 21300094
+      pixelarmory_48: 21300096
+      pixelarmory_49: 21300098
+      pixelarmory_5: 21300010
+      pixelarmory_50: 21300100
+      pixelarmory_51: 21300102
+      pixelarmory_52: 21300104
+      pixelarmory_53: 21300106
+      pixelarmory_54: 21300108
+      pixelarmory_55: 21300110
+      pixelarmory_56: 21300112
+      pixelarmory_57: 21300114
+      pixelarmory_58: 21300116
+      pixelarmory_59: 21300118
+      pixelarmory_6: 21300012
+      pixelarmory_60: 21300120
+      pixelarmory_61: 21300122
+      pixelarmory_62: 21300124
+      pixelarmory_63: 21300126
+      pixelarmory_64: 21300128
+      pixelarmory_65: 21300130
+      pixelarmory_66: 21300132
+      pixelarmory_67: 21300134
+      pixelarmory_68: 21300136
+      pixelarmory_69: 21300138
+      pixelarmory_7: 21300014
+      pixelarmory_70: 21300140
+      pixelarmory_71: 21300142
+      pixelarmory_72: 21300144
+      pixelarmory_73: 21300146
+      pixelarmory_74: 21300148
+      pixelarmory_75: 21300150
+      pixelarmory_76: 21300152
+      pixelarmory_77: 21300154
+      pixelarmory_78: 21300156
+      pixelarmory_79: 21300158
+      pixelarmory_8: 21300016
+      pixelarmory_80: 21300160
+      pixelarmory_81: 21300162
+      pixelarmory_82: 21300164
+      pixelarmory_83: 21300166
+      pixelarmory_84: 21300168
+      pixelarmory_85: 21300170
+      pixelarmory_9: 21300018
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
