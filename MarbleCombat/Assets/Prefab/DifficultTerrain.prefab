@@ -85,6 +85,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -96,6 +98,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -108,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 9965d9a37d244aa47b1ad46ee90abcb3, type: 3}
   m_Color: {r: 0.81960785, g: 0.66426533, b: 0.6627451, a: 0.2509804}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,4 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2c61f616d4ce74a9a052554c8a65d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drag: 3
+  drag: 5

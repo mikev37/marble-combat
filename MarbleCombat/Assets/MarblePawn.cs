@@ -80,7 +80,7 @@ public class MarblePawn : MonoBehaviour
 	public Vector2 turnRotation, moveDirection;
 	Vector2 targetDelta;
 	Vector2 averageAlignment;
-	void Normal() {
+	public virtual void Normal() {
 		eyes.sprite = normal;
 		
 		Vector2 averagePosition = transform.position;
@@ -169,7 +169,7 @@ public class MarblePawn : MonoBehaviour
 	public List<MarblePawn> enemies;
 	public List<MarblePawn> allies;
 
-	private void OnTriggerEnter2D(Collider2D collision) {
+	protected virtual void OnTriggerEnter2D(Collider2D collision) {
 		MarblePawn otherMB = collision.gameObject.GetComponentInChildren<MarblePawn>();
 		if (otherMB) {
 			if (key != otherMB.key) {
@@ -217,7 +217,7 @@ public class MarblePawn : MonoBehaviour
 			}
 		}
 	}
-	private void OnCollisionEnter2D(Collision2D collision) {
+	void OnCollisionEnter2D(Collision2D collision) {
 		MarblePawn otherMB = collision.gameObject.GetComponentInChildren<MarblePawn>();
 		if (otherMB) {
 			//DebugLog("Detected collision with Marble");
