@@ -26,16 +26,16 @@ public class SpawnZone : MonoBehaviour
 					go.GetComponent<MarblePawn>().key = key;
 					go.GetComponentInChildren<Body>().GetComponent<SpriteRenderer>().sprite = body;
 					if (iterator % columns > 0) {
-						/*SpringJoint2D join = go.AddComponent<SpringJoint2D>();
+						SpringJoint2D join = go.AddComponent<SpringJoint2D>();
 						join.connectedBody = goose[iterator - 1].GetComponent<Rigidbody2D>();
 						join.enableCollision = true;
 						/*join.maxForce = 3;
 						join.maxTorque = .1f;
-						join.autoConfigureOffset = true;
+						join.autoConfigureOffset = true;*/
 						join.distance = WIDTH;
 						join.frequency = .5f;
 						join.dampingRatio = .1f;
-						join.breakForce = 100;*/
+						/*join.breakForce = 100;*/
 						RelativeJoint2D join2 = go.AddComponent<RelativeJoint2D>();
 						join2.enableCollision = true;
 						join2.connectedBody = goose[iterator - 1].GetComponent<Rigidbody2D>();
@@ -45,13 +45,13 @@ public class SpawnZone : MonoBehaviour
 						join2.autoConfigureOffset = true;
 					}
 					if (rows > 0) {
-						/*SpringJoint2D join2 = go.AddComponent<SpringJoint2D>();
-						join2.enableCollision = true;
-						join2.connectedBody = goose[iterator - columns].GetComponent<Rigidbody2D>();
-						join2.distance = HEIGHT;
-						join2.frequency = .5f;
-						join2.dampingRatio = .1f;
-						join2.breakForce = 100;*/
+						SpringJoint2D join = go.AddComponent<SpringJoint2D>();
+						join.enableCollision = true;
+						join.connectedBody = goose[iterator - columns].GetComponent<Rigidbody2D>();
+						join.distance = HEIGHT;
+						join.frequency = .5f;
+						join.dampingRatio = .1f;
+						/*join2.breakForce = 100;*/
 						RelativeJoint2D join2 = go.AddComponent<RelativeJoint2D>();
 						join2.enableCollision = true;
 						join2.connectedBody = goose[iterator - columns].GetComponent<Rigidbody2D>();

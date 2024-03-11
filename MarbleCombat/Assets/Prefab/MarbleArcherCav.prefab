@@ -156,6 +156,6 @@ MonoBehaviour:
   enemies: []
   allies: []
   arrow: {fileID: 8323499796027950577, guid: 057e707381451fd44929c3b50af104b4, type: 3}
-  MIN_DISTANCE: 4
+  MIN_DISTANCE: 7
   MAX_DISTANCE: 8
   RELOAD: 2

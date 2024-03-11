@@ -150,7 +150,7 @@ TextureImporter:
       213: -8754175752265592302
     second: summer_pine_tree_tiles_48
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -167,10 +167,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -179,9 +181,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -209,6 +211,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -220,6 +224,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -232,6 +237,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1276,9 +1295,58 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      summer_pine_tree_tiles_0: 1592217504460004516
+      summer_pine_tree_tiles_1: 9160588945296905867
+      summer_pine_tree_tiles_10: 2579653549909724940
+      summer_pine_tree_tiles_11: 785001660727518787
+      summer_pine_tree_tiles_12: -8711770925939154754
+      summer_pine_tree_tiles_13: 10959239596636806
+      summer_pine_tree_tiles_14: 5654599487529886249
+      summer_pine_tree_tiles_15: -8247447911233049294
+      summer_pine_tree_tiles_16: -3471081539600652842
+      summer_pine_tree_tiles_17: -5865472967765539208
+      summer_pine_tree_tiles_18: 2041074932987013960
+      summer_pine_tree_tiles_19: 3290104318588091680
+      summer_pine_tree_tiles_2: -2516261759758463111
+      summer_pine_tree_tiles_20: -4644983672431203495
+      summer_pine_tree_tiles_21: 2205814299674301345
+      summer_pine_tree_tiles_22: -632860177734710975
+      summer_pine_tree_tiles_23: 2021711667898113817
+      summer_pine_tree_tiles_24: 3610366143395142120
+      summer_pine_tree_tiles_25: -8462762284840798217
+      summer_pine_tree_tiles_26: 4463728121224450496
+      summer_pine_tree_tiles_27: 6203925772982580005
+      summer_pine_tree_tiles_28: 4508580303434586154
+      summer_pine_tree_tiles_29: 9052214292201889448
+      summer_pine_tree_tiles_3: 3532526619200268506
+      summer_pine_tree_tiles_30: -6872055178064626505
+      summer_pine_tree_tiles_31: -3723200211116976802
+      summer_pine_tree_tiles_32: 3111671945804103304
+      summer_pine_tree_tiles_33: 3458640496276292542
+      summer_pine_tree_tiles_34: -5382231391319101720
+      summer_pine_tree_tiles_35: -1184511038669692518
+      summer_pine_tree_tiles_36: 4671101310112815001
+      summer_pine_tree_tiles_37: -2747015669223893573
+      summer_pine_tree_tiles_38: -87672293119397612
+      summer_pine_tree_tiles_39: -7394653261612471730
+      summer_pine_tree_tiles_4: -7367472007871177818
+      summer_pine_tree_tiles_40: 4490010917550256316
+      summer_pine_tree_tiles_41: 9007253068033127094
+      summer_pine_tree_tiles_42: 6685962992052181139
+      summer_pine_tree_tiles_43: -3672036467028098542
+      summer_pine_tree_tiles_44: 655496769065163448
+      summer_pine_tree_tiles_45: -5085548920511286353
+      summer_pine_tree_tiles_46: 1328331705305633657
+      summer_pine_tree_tiles_47: -867250693431248630
+      summer_pine_tree_tiles_48: -8754175752265592302
+      summer_pine_tree_tiles_5: 3715098075826356123
+      summer_pine_tree_tiles_6: 258903730918635735
+      summer_pine_tree_tiles_7: -233762330332144478
+      summer_pine_tree_tiles_8: -4806526649021649936
+      summer_pine_tree_tiles_9: 5977626185959961112
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
