@@ -13,7 +13,7 @@ public class Arrow : MonoBehaviour
     void Start()
     {
 		transform.position = shooter;
-		target = target + (Vector2)transform.forward / 2;
+		target = target + (Vector2)transform.forward + Random.insideUnitCircle;
     }
 	public ContactFilter2D filter;
     // Update is called once per frame
